@@ -1,0 +1,52 @@
+<div class='card'>
+    <div class='card-header'>
+        <h1>{{title}}</h1>
+    </div>
+
+    <div class='row'>
+        <div class='row-cd-2'>
+            Name: 
+            <input type='text' [(ngModel)] ='listFilter'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='row-cd-4'>Filter by: {{listFilter}}</div>
+    </div>
+
+    <div class='body-card'>
+        <div class="RatingStaff">{{staffRating}}</div>
+        <table class='table'  *ngIf = 'Istaffs' 
+       >
+            <thead>
+                <tr>
+                    <th>
+                        <button class='btn btn-click' (click)='toggleImage()'>
+                            {{showImage? 'Hide': 'Show'}} Image
+                        </button>
+                    </th>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Position</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor = 'let staff of filterStaff'>
+                    <td><img  *ngIf ='showImage'
+                        [src]='staff.imageUrl'
+                        [style.width.px]='imageWidth'></td>
+                    <td>{{staff.Name | ChangeToUpper}}</td>
+                    <td>{{staff.ID}}</td>
+                    <td>{{staff.Position}}</td>
+                    <td><pm-star [rating] = 'staff.Rating'
+                        (ratingClicked)="onRatingClicked($event)">
+                    </pm-star></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    
+
+</div>

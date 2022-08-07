@@ -1,0 +1,53 @@
+thead th{
+    color :rgb(154, 154, 195);
+    padding: 5px 40px;
+    margin: 10px 5px;
+    text-align: center;
+}
+tbody td{
+    padding: 10px 40px;
+    margin: 30px; 
+    text-align: center;
+}
+
+.row{
+    margin: 20px;
+}
+
+.row-cd-2 { 
+    font-size: larger;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.row-cd-4{ 
+    font-size: larger;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.btn{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #64538f;
+    width: 150px;
+    border: 2px solid  #fff;
+    border-radius: 5px;
+    color:#fff
+}
+
+.card-header{
+    background-color:rgb(242, 245, 249);
+}
+
+.card-header h1{
+    font-size: x-large;
+    font-family: serif;
+    color: #351c75;
+}
+
+.RatingStaff{
+    font-size: x-large;
+    font-family: serif;
+    color: #351c75;
+    text-align: center;
+}
